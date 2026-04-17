@@ -1,0 +1,12 @@
+{
+  "name": "talentotech-backend-nodejs",
+  "version": "1.0.0",
+  "description": "espacio creado para almacenar las actividades de la certificacion en node js de talento tech.",
+  "license": "ISC",
+  "author": "LuisHerenu11",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
