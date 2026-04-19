@@ -35,8 +35,8 @@ class Automóvil{
 let marcas = ["Toyota","Mazda","Mitsubishi","Renault","Fiat","Chevrolet","BMW","Alpha Romeo","Audi","Nissan"];
 let modelos = ["Supra","RX7","Eclipse","12","Cronos","Corvette ZRI","Serie 5 GT","GTV","TT","Skyline GT-R R32"];
 let anios = ["2025","2004","1998","1969","2020","2026","2009","2022","2023","1995"];
-let colores = ["Rojo","Verde","Negro","Azul","Blanco","Naranja","Turquesa","Gris","Bordo","Dorado"];
-const autos = [];
+let colores = ["Rojo","Verde","Negro","Negro","Blanco","Naranja","Turquesa","Negro","Bordo","Dorado"];
+let autos = [];
 
 const cantidadTotal = marcas.length;
 
@@ -50,5 +50,21 @@ for (let i = 0; i < cantidadTotal; i++) {
     );
     autos.push(nuevoAuto);
 }
+//console.log(autos)
+const buscarColor = (unaListaDeAutos,unColor) => {
+    // inicio de variables.
+    let listaColores = [ ];
+    let cantidadDelColor = undefined;
+    // recorrido del array de objetos.
+    unaListaDeAutos.forEach(auto => {
+        let {color} = auto;
+        listaColores.push(color)
+    });
+    // filtrado por color en parametro.
+    const listaFiltradaPorColor = listaColores.filter((color) => color == unColor) 
+    // tamaño del arreglo para contar las repeticiones del color buscado.
+    cantidadDelColor = listaFiltradaPorColor.length;
+    return cantidadDelColor;
+}
 
-console.log(autos)
+console.log(buscarColor(autos,"Negro"));
